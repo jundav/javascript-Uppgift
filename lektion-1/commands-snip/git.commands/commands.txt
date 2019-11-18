@@ -1,0 +1,26 @@
+  
+# För att skapa en ny git i en mapp (görs bara en gång)
+     git init
+
+# Lägg till en github-repository (görs bara en gång)
+     git remote add origin https://github.com/dinrepoadress.git
+
+-------------------------------------------------------------------
+
+# För att lägga till nya filer 
+     git add .
+
+# För att spara nya filer och ändrade filer
+     git commit -m "Ett vettigt meddelande"
+
+# För att synka den lokala giten med din github
+     git push -u origin master
+
+
+--------------------------------------------------------------------
+
+# När vi vill hämta hem ett helt nytt projekt (Om vi inte har sen tidigare)
+     git clone https://github.com/dinrepoadress.git
+
+# När vi vill hämta hem de senaste uppdateringarna (Vi har projektet sen tidigare)
+     git pull origin
