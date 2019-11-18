@@ -24,7 +24,13 @@
     Mikrokod
 */
 
-document.body.innerText = "Detta är en txt";
-console.log('här skriver vi ut nått i konsolen');
+// skriver ut på själva hemsidan
+document.body.innerText = 'Detta är en text ';
+
+// skriver ut i konsolen
+console.log('Här skriver vi ut nått i konsolen');
 console.warn('Detta är en varning!');
-console.error('Detta är ett felmeddelande');
+console.error('Detta är ett felmeddelande!');
+
+// SANDBOX - DEVELOPER - Här loggar vi allt!
+// PRODUCTION - SKARPT LÄGE - Här loggar vi väldigt lite!
