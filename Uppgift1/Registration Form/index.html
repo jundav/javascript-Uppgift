@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/9272ac0a4d.js"></script>
+    <link rel="stylesheet" href="custom.css">
+<body>
+
+    <nav class="navbar navbar-light bg-info ">
+        <span class="navbar-brand mb-0 h1">
+        <i class="fab fa-viacoin"></i>
+         Registration
+        </span> 
+    </nav>
+
+    <div class="container my-3">
+        <form id="oneForm">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                       <label for="firstname">First Name</label>
+                       <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                       <div id="error_fname" class="error-color"></div> 
+                       
+                       
+                  </div>                  
+                  <div class="form-group col-md-6">
+                       <label for="lastName">Last Name</label>
+                       <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                       <div id="error_lname" class="error-color"></div> 
+                  </div>
+                  <div id="radio" class="col-md-12">
+                    <label class="">Man</label>
+                    <input type="radio" name="gender" id="Man" value="Man">
+                    <label class="">Woman</label>
+                    <input type="radio" name="gender" id="Woman" value="Woman">
+                    <label class="">Other</label>
+                    <input type="radio" name="gender" id="Other" value="Other">                    
+                    <div id="error_radio" class="small error-color"></div>                    
+                  </div>
+                  
+                  <div class="form-group col-md-6">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option id='loc-G'>Göteborg</option>
+                          <option id='loc-S'>Stockholm</option>                          
+                          <option id='loc-M'>Malmo</option>
+                          <option id='loc-UM'>Umeå</option>
+                          <option id='loc-UP'>Uppsala</option>                          
+                          <option id='loc-V'>Västerås</option>                         
+                        </select>
+                        <div id="error_location" class="small error-color"></div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                    <div id="error_email" class="error-color"></div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <div id="error_password" class="error-color"></div>
+                  </div>
+                  <div class="form-group col-md-6 ">
+                     <label for="confirm_password">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+                      <div id="error_cpassword" class="error-color"></div> 
+                  </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      I accept the user terms and integrity policies for this site
+                    </label>
+                    <div id="error_checkOut" class="error-color"></div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+               
+        <div id="firstName_Error"></div>
+        <div id="lastName_Error"></div>
+
+    </div>                               
+    
+
+    
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

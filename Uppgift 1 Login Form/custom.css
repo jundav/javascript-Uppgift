@@ -1,0 +1,24 @@
+ 
+ #loginpage{
+     background-color: rgb(255, 255, 255);
+     
+     
+ }
+ #container{
+    margin: 10rem 0 0 0; 
+      
+}
+
+.form-group{
+    margin:1rem 35rem;
+}
+
+.btn{
+    margin:0rem 35rem;
+}
+
+.error-color{
+    color:#e40202f6;
+    font-size:0.9rem;
+    
+}
