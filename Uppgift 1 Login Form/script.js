@@ -41,9 +41,19 @@ function validatePassword(inputPassword){
    
 }
 
-// validatecheck('#checkbox'){
-
-// }
+ function validatecheck(checkbox){
+   value=$(checkbox).is(':checked')
+   
+   if(value != true){
+    $('#error_check').html('*You must check out')
+    return false
+   }
+   else
+   {
+    $('#error_check').html('')
+       return true
+   }
+}
 
 
 $('#loginpage').on('submit',function(e){
@@ -51,15 +61,15 @@ $('#loginpage').on('submit',function(e){
     e.preventDefault();
     console.log(e);
     console.log($(exampleInputPassword1).val())
-    console.log($(exampleCheckbox1).val())
+    console.log($(exampleCheck1).is(':checked'))
     validateEmail('#exampleInputEmail1')
     validatePassword('#exampleInputPassword1')
-    validatecheck('#checkbox')
+    validatecheck('#exampleCheck1')
 
-    
-
-
-
-
+    if (validateEmail('#exampleInputEmail1')&& 
+    validatePassword('#exampleInputPassword1') && 
+    validatecheck('#exampleCheck1')){
+    window.location.replace('login.html')
+ }
 
 })
