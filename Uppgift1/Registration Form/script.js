@@ -160,19 +160,19 @@ $(function(){
     }
 
     function validateEmail(emailinfo){
-
-        
-        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(emailinfo).val())))
-        {
-          $('#error_email').html('You have entered an invalid email address!')
-          
-        }
-
         if($(emailinfo).val() === "")
         {
             $('#error_email').html('Enter Your Email Address')
             return false
-        }          
+        }  
+        
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(emailinfo).val())))
+        {
+          $('#error_email').html('You have entered an invalid email address!')
+          return false
+        }
+
+                
         
         else{
             $('#error_email').html('')
@@ -180,6 +180,18 @@ $(function(){
         }
         
     }
+    function textAreaValidation() {
+
+        let textArea = $('#textAreaField').val();
+      
+        if (textArea == '') {
+          $('#errTextarea').html('Please make sure you filled out your description field')
+          return false;
+        } else {
+            $('#errTextarea').html('')
+            return true;
+        }
+      }
 
 
 
@@ -211,13 +223,15 @@ $(function(){
         validateCheckout('#gridCheck')
         validateState('#loc-G','#loc-S','#loc-M','#loc-UM','#loc-UP','#loc-V')
         validateEmail('#inputEmail4')
+        textAreaValidation()
 
         if (validateField('#firstName','#lastName') && 
         validateRadio() && 
         validatePassword('#inputPassword4','#confirm_password') && 
         validateCheckout('#gridCheck') && 
         validateState('#loc-G','#loc-S','#loc-M','#loc-UM','#loc-UP','#loc-V') && 
-        validateEmail('#inputEmail4')){
+        validateEmail('#inputEmail4')&&
+        textAreaValidation()){
         window.location.replace('login.html')
      }
     })
@@ -227,6 +241,20 @@ $(function(){
     })
     $('#inputPassword4,#confirm_password').keyup(function(e){
         validatePassword('#inputPassword4','#confirm_password') 
+    })
+    $('#inputEmail4').keyup(function(e){
+        validateEmail('#inputEmail4')
+
+    })
+    $('#textAreaField').keyup(function(e){
+        textAreaValidation()
+    })
+    $('#gridCheck').click(function(e){
+    validateCheckout('#gridCheck')
+    })
+    
+    $('#radio').click(function(e){
+        validateRadio() 
     })
     $('#inputState').click(function(e){
         validateState('#loc-G','#loc-S','#loc-M','#loc-UM','#loc-UP','#loc-V')
